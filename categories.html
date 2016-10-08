@@ -1,6 +1,6 @@
-<div>
+<div ng-app = 'skapp'>
   <ul>
-    <li ng-repeat = "item in con.items" ui-sref = "items({id:$index})">
+    <li ng-repeat = "item in con.items" ui-sref = "categories.item({id:$index})">
     On menu {{ item.name }}
     </li>
     <ui-view><ui-view>

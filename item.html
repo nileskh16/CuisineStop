@@ -1,5 +1,9 @@
 <div>
-  <a ui-sref = "index">Home</a>&lt;
-  <a ui-sref = "categories">Categories</a>&lt;
-
+  <!--<a ui-sref = "index">Home</a>&lt;
+  <a ui-sref = "categories">Categories</a>&lt;-->
+  <ul>
+    <li ng-repeat = "food in con.item.en">
+      {{ food }}
+    </li>
+  </ul>
 </div>

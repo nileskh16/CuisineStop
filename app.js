@@ -9,8 +9,7 @@ angular.module('skapp', ['ui.router'])
 
 RouteConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RouteConfig($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise('/index');
-
+  //$urlRouterProvider.otherwise('/index');
   $stateProvider
   .state('categories', {
     url: '/categories',
@@ -25,12 +24,11 @@ function RouteConfig($stateProvider, $urlRouterProvider){
   .state('index', {
     url: '/index',
     templateUrl: 'index.html',
-    controller: 'homeCon as con',
   })
-  .state('item',{
+  .state('categories.item',{
     url: '/item/{id}',
     templateUrl: 'item.html',
-    controller: 'itemCon as con',
+    controller: 'itemCon as con'
   });
 };
 
@@ -38,11 +36,11 @@ list.$inject = ['$q', '$timeout'];
 function list($q, $timeout){
   var service = this;
   var items = [];
-  items.push({name:'American'});
-  items.push({name:'Italian'});
-  items.push({name:'Indian'});
-  items.push({name:'Mexican'});
-  items.push({name:'Chinese'});
+  items.push({name:'American', en: ['Hotdogs', 'Pancakes', 'Burgers', 'Donut', 'Pies']});
+  items.push({name:'Italian', en: ['Pizza', 'Pasta', 'Maggie']});
+  items.push({name:'Indian', en: ['Rotee', 'Panipuri', 'Rabadi']});
+  items.push({name:'Mexican', en: ['Chilie', 'Nacho']});
+  items.push({name:'Chinese', en: ['Rice', 'Noodles', 'Chopsie']});
 
   service.getItems = function(){
     var prom = $q.defer();
@@ -64,8 +62,8 @@ function catCon($scope, items){
   con.items = items;
 };
 
-itemCon.$inject = ['$scope', 'list'];
-function itemCon($scope, list){
+itemCon.$inject = ['$scope', 'items', '$stateParams'];
+function itemCon($scope, items, $stateParams){
   var con = this;
-
+  con.item = items[$stateParams.id];
 };
