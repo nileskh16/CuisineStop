@@ -29,7 +29,7 @@ function RouteConfig($stateProvider, $urlRouterProvider){
   })
   .state('item',{
     url: '/item/{id}',
-    templateUrl: 'items.html',
+    templateUrl: 'item.html',
     controller: 'itemCon as con',
   });
 };
