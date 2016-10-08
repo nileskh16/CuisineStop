@@ -9,12 +9,12 @@ angular.module('skapp', ['ui.router'])
 
 RouteConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RouteConfig($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('home');
 
   $stateProvider
   .state('categories', {
     url: '/categories',
-    templateUrl: 'views/categories.html',
+    templateUrl: 'categories.html',
     controller: 'catCon as con',
     resolve:{
       items: ['list', function(list){
@@ -24,12 +24,12 @@ function RouteConfig($stateProvider, $urlRouterProvider){
   })
   .state('home', {
     url: '/home',
-    templateUrl: 'views/home.html',
+    templateUrl: 'home.html',
     controller: 'homeCon as con',
   })
-  .sate('item',{
+  .state('item',{
     url: '/item/{id}',
-    templateUrl: 'views/items.html',
+    templateUrl: 'items.html',
     controller: 'itemCon as con',
   });
 };
