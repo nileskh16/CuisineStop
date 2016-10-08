@@ -46,7 +46,7 @@ function list($q, $timeout){
 
   service.getItems = function(){
     var prom = $q.defer();
-    $setTimeout(function () {
+    $timeout(function () {
       prom.resolve(items);
     }, 2000);
     return prom.promise;
