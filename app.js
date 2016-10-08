@@ -9,7 +9,7 @@ angular.module('skapp', ['ui.router'])
 
 RouteConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RouteConfig($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise('home');
+  $urlRouterProvider.otherwise('/index');
 
   $stateProvider
   .state('categories', {
@@ -22,9 +22,9 @@ function RouteConfig($stateProvider, $urlRouterProvider){
       }]
     }
   })
-  .state('home', {
-    url: '/home',
-    templateUrl: 'home.html',
+  .state('index', {
+    url: '/index',
+    templateUrl: 'index.html',
     controller: 'homeCon as con',
   })
   .state('item',{
