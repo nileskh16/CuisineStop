@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <li ng-repeat = "item in con.items" ui-sref = "items({id:$index})">
+    {{ item.name }}
+    </li>
+    <ui-view><ui-view>
+  </ul>
+</div>
