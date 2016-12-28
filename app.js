@@ -11,21 +11,25 @@ function NarrowItDownController(MenuSearchService){
 	sk.food_name = '';
 	sk.got = [];
 	sk.didyou = true;
+	sk.yesidid = false;
 	sk.fetch_data = function(food_name){
 	sk.prom = MenuSearchService.getItems(food_name);
 	sk.prom.then(function(data){
 		if(data.length <= 0)
 		{
 			sk.didyou = false;
+			sk.yesidid = false;
 		}
 		else
 		{
 			sk.got = data;
 			sk.didyou = true;
+			sk.yesidid = true;
 		}
 	}).catch(function(error){
 		console.log(error)
 		sk.didyou = false;
+		sk.yesidid = false;
 	});
 	};
 	
