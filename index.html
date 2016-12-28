@@ -11,6 +11,7 @@
 		<center><h2>Can't decide on today's meal. Real Madridista is here for you!</h2></center>
 		<div style = "margin: 1%;"><input type = "text" placeholder = "Search about food" ng-model = "con.food_name" /><input type = "submit" ng-click = "con.fetch_data(con.food_name)" value = "Narrow it Down For Me" /></div>
 		<div style = "margin: 1%;" ng-show = "con.didyou">
+			<h2>Found ({{con.got.length}}) results.</h2>
 			<table class = "table table-striped">
 				<thead>
 					<tr>
