@@ -12,7 +12,7 @@ function NarrowItDownController(MenuSearchService){
 	sk.got = [];
 	sk.didyou = true;
 	sk.fetch_data = function(food_name){
-	sk.prom = Mservice.getItems(food_name);
+	sk.prom = MenuSearchService.getItems(food_name);
 	sk.prom.then(function(data){
 		if(data.length <= 0)
 		{
