@@ -7,8 +7,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	</head>
-	<body ng-controller = "skcon as con">
-		<center><h2>Can't decide on today's meal. Real Madridsta is here for you!</h2></center>
+	<body ng-controller = "NarrowItDownController as con">
+		<center><h2>Can't decide on today's meal. Real Madridista is here for you!</h2></center>
 		<div style = "margin: 1%;"><input type = "text" placeholder = "Search about food" ng-model = "con.food_name" /><input type = "submit" ng-click = "con.fetch_data(con.food_name)" value = "Narrow it Down For Me" /></div>
 		<div style = "margin: 1%;" ng-show = "con.didyou">
 			<table class = "table table-striped">
