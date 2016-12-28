@@ -6,7 +6,7 @@ var myapp = angular.module('SK', [])
 	.service('MenuSearchService', MenuSearchService);
 	
 NarrowItDownController.$inject = ['MenuSearchService'];
-function skcon(MenuSearchService){
+function NarrowItDownController(MenuSearchService){
 	var sk = this;
 	sk.food_name = '';
 	sk.got = [];
@@ -41,7 +41,6 @@ function MenuSearchService($http, $q, $timeout){
 	var got = false;
 	service.getItems = function(desc){
 		var prom = $q.defer();
-		console.log(desc)
 		if(desc != '')
 		{
 			$http({
