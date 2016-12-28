@@ -2,11 +2,11 @@
 	'use-strict';
 
 var myapp = angular.module('SK', [])
-	.controller('skcon', skcon)
-	.service('Mservice', Mservice);
+	.controller('NarrowItDownController', NarrowItDownController)
+	.service('MenuSearchService', MenuSearchService);
 	
-skcon.$inject = ['Mservice'];
-function skcon(Mservice){
+NarrowItDownController.$inject = ['MenuSearchService'];
+function skcon(MenuSearchService){
 	var sk = this;
 	sk.food_name = '';
 	sk.got = [];
@@ -22,7 +22,6 @@ function skcon(Mservice){
 		{
 			sk.got = data;
 			sk.didyou = true;
-			console.log(data);
 		}
 	}).catch(function(error){
 		console.log(error)
@@ -35,9 +34,9 @@ function skcon(Mservice){
 	};
 }
 
-Mservice.$inject = ['$http', '$q', '$timeout'];
+MenuSearchService.$inject = ['$http', '$q', '$timeout'];
 
-function Mservice($http, $q, $timeout){
+function MenuSearchService($http, $q, $timeout){
 	var service = this;
 	var got = false;
 	service.getItems = function(desc){
