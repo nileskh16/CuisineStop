@@ -1,3 +1,15 @@
-<tr>
-	<td>{{item.name}}</td><td>{{item.short_name}}</td><td>{{item.description}}</td><td><button ng-click = "con.rmitem($index)">Don't want this One</button></td>
-</tr>
+<table class = "table table-striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Short Name</th>
+						<th>Description</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "item in con.got">
+						<td>{{item.name}}</td><td>{{item.short_name}}</td><td>{{item.description}}</td><td><button ng-click = "con.rmitem($index)">Don't want this One</button></td>
+					</tr>
+				</tbody>
+			</table>
