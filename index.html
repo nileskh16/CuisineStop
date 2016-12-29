@@ -22,9 +22,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat = "item in con.got">
-						<td>{{item.name}}</td><td>{{item.short_name}}</td><td>{{item.description}}</td><td><button ng-click = "con.rmitem($index)">Don't want this One</button></td>
-					</tr>
+					<list-item ng-repeat = "item in con.got"></list-item>
 				</tbody>
 			</table>
 		</div>
