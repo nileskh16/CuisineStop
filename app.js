@@ -10,7 +10,7 @@ function ListItem(){
 	var ddo = {
 		templateUrl: 'listItem.html',
 		restrict: 'E',
-		foundList: '@foundList',
+		foundList: '=foundList',
 		onRemove: '@onRemove'
 	};
 	return ddo;
