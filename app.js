@@ -11,12 +11,17 @@ function ListItem(){
 		templateUrl: 'listItem.html',
 		restrict: 'E',
 		scope: {
-		list: '@foundList',
-		remove: '@onRemove'
-		}
+		foundItems: '<',
+		onRemove: '&'
+		},
+		controller: DirController,
+		controllerAs: 'Dir',
+		bindToController: true
 	};
 	return ddo;
 }
+	
+function DirController($scope){};
 	
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService){
