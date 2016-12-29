@@ -8,8 +8,8 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat = "item in list">
-						<td>{{item.name}}</td><td>{{item.short_name}}</td><td>{{item.description}}</td><td><button ng-click = "onRemove($index)">Don't want this One</button></td>
+					<tr ng-repeat = "item in foundItem">
+						<td>{{item.name}}</td><td>{{item.short_name}}</td><td>{{item.description}}</td><td><button ng-click = "Dir.onRemove($index)">Don't want this One</button></td>
 					</tr>
 				</tbody>
 			</table>
