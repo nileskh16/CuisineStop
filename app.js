@@ -10,7 +10,9 @@ function ListItem(){
 	var ddo = {
 		templateUrl: 'listItem.html',
 		restrict: 'E',
+		scope: {
 		list: '=foundList'
+		}
 	};
 	return ddo;
 }
