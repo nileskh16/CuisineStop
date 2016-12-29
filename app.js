@@ -11,7 +11,7 @@ function ListItem(){
 		templateUrl: 'listItem.html',
 		restrict: 'E',
 		scope: {
-		foundItems: '<',
+		foundItem: '<',
 		onRemove: '&'
 		},
 		controller: DirController,
