@@ -3,7 +3,15 @@
 
 var myapp = angular.module('SK', [])
 	.controller('NarrowItDownController', NarrowItDownController)
-	.service('MenuSearchService', MenuSearchService);
+	.service('MenuSearchService', MenuSearchService)
+	.directive('listItem', ListItem);
+	
+function ListItem(){
+	var ddo = {
+		templateUrl: 'listItem.html'
+	};
+	return ddo;
+}
 	
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService){
