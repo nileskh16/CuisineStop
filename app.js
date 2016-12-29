@@ -11,7 +11,8 @@ function ListItem(){
 		templateUrl: 'listItem.html',
 		restrict: 'E',
 		scope: {
-		list: '=foundList'
+		list: '@foundList',
+		remove: '@onRemove'
 		}
 	};
 	return ddo;
