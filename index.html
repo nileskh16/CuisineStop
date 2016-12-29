@@ -12,7 +12,7 @@
 		<div style = "margin: 1%;"><input type = "text" placeholder = "Search about food" ng-model = "con.food_name" /><input type = "submit" ng-click = "con.fetch_data(con.food_name)" value = "Narrow it Down For Me" /></div>
 		<div style = "margin: 1%;" ng-show = "con.yesidid">
 			<h2>Found ({{con.got.length}}) results.</h2>
-			<found-items found-list="con.got"></found-items>
+			<found-items found-list="con.got" on-remove = "con.rmitem"></found-items>
 		</div>
 		<div style = "margin: 1%;" ng-hide = "con.didyou">
 			<p><h3>Nothing found!</h3></p>
