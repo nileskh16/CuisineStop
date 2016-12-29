@@ -4,11 +4,14 @@
 var myapp = angular.module('SK', [])
 	.controller('NarrowItDownController', NarrowItDownController)
 	.service('MenuSearchService', MenuSearchService)
-	.directive('listItem', ListItem);
+	.directive('foundItems', ListItem);
 	
 function ListItem(){
 	var ddo = {
-		templateUrl: 'listItem.html'
+		templateUrl: 'listItem.html',
+		restrict: 'E',
+		foundList: '@foundList',
+		onRemove: '@onRemove
 	};
 	return ddo;
 }
